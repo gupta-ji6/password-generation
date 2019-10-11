@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Change Password</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1 id="welcome"></h1>
+    <h3 id="pwd"></h3>
+    <h3 id="username"></h3>
+    <form>
+      <fieldset>
+        <legend>Change Password</legend>
+        <input type="password" id="newpwd" name="newpwd" placeholder="New Password" />
+        <label for="newpwd"></label><br />
+        <input type="button" value="Change" onclick="change()" />
+      </fieldset>
+    </form>
+
+    <script>
+      var name = localStorage.getItem("fName");
+      var one = name.substring(0,2);
+      var two = localStorage.getItem('lName').substring(0,2);
+      var three =  Math.floor(1000 + Math.random() * 9000);
+      document.getElementById("welcome").innerHTML = "Welcome, " + name;
+      document.getElementById("pwd").innerHTML =
+        "Your system genrated password is - " + localStorage.getItem("pwd");
+      document.getElementById("username").innerHTML = "Your system generated username is - " + one + two + three;
+
+      function change() {
+        var newPwd = document.getElementById("newpwd").value;
+        console.log(newPwd);
+        localStorage.setItem("pwd", newPwd);
+        localStorage.setItem("username", one+two+three)
+        window.location.reload();
+      }
+    </script>
+  </body>
+</html>

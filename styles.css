@@ -1,0 +1,33 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b2b2b;
+  flex-direction: column;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+input {
+  margin: 10px;
+}
+
+.none {
+  display: none;
+}
+
+input[type=button], button {
+  background-color: #2b2b2b;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  color: black;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Registration</legend>
+        <label for="fName">First Name</label>
+        <input
+          type="text"
+          id="fName"
+          name="fName"
+          placeholder="Enter your first name"
+          value=""
+        /><br>
+        <label for="lName">Last Name</label>
+        <input
+          type="text"
+          id="lName"
+          name="lName"
+          placeholder="Enter your last name"
+          value=""
+        /><br>
+        <label for="mob">Mobile Number</label>
+        <input
+          type="number"
+          maxlength="10"
+          minlength="10"
+          id="mob"
+          name="mob"
+          placeholder="Enter your phone number"
+        /><br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" /><br>
+        <label for="pet-select">Choose a ID Proof:</label>
+
+        <select name="idProof" id="idProof" onchange="show()">
+          <option value="" disabled selected>Select an Option</option>
+          <option value="pan">PAN</option>
+          <option value="adhar">Adhar Number</option>
+          <option value="dl">Driving License</option>
+        </select><br>
+
+        <div id="pan" class="none">
+          <label for="pan-id">PAN</label>
+          <input
+            type="text"
+            id="pan-id"
+            name="pan-id"
+            placeholder="Enter your PAN"
+            value=""
+          /><br>
+        </div>
+
+        <div id="adhar" class="none">
+            <label for="adhar-id">Adhar</label>
+            <input
+              type="text"
+              id="adhar-id"
+              name="adhar-id"
+              placeholder="Enter your Adhar"
+              value=""
+            /><br>
+          </div>
+
+          <div id="dl" class="none">
+              <label for="dl-id">DL</label>
+              <input
+                type="text"
+                id="dl-id"
+                name="dl-id"
+                placeholder="Enter your DL number"
+                value=""
+              /><br>
+            </div>
+        <input type="button" value="Register" onclick="register()"/>
+      </fieldset>
+    </form>
+    <script src="app.js"></script>
+
+  </body>
+</html>
