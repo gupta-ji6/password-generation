@@ -46,7 +46,7 @@ A JavaScript program to generate a system generated password and username using 
 4. Date of Birth - `70`
 5. Vowels of ID - `AUAUE`
 6. Unique Even numbers - `8`
-7. Password - `taAy7091AUAUE8`
+7. Password - `taAy970AUAUE8`
 
 ### Username Generation Result
 
