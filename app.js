@@ -61,7 +61,6 @@ function register() {
   var five = vowel;
   var six = evenNum(even);
   localStorage.setItem("pwd", (one+two+three+four+five+six));
-  alert(one+two+three+four+five+six);
   window.location.href='changePwd.html';
 }
 
