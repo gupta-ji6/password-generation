@@ -57,7 +57,8 @@ function register() {
   var one = lName.substring(lName.length - 2, lName.length);
   var two = fName.substring(0, 2);
   var three = sumOfOdd(mob);
-  var four = dob.charAt(0) + dob.charAt(dob.length);
+  var four = dob.charAt(3) + dob.charAt(dob.length - 2);
+  alert(four);
   var five = vowel;
   var six = evenNum(even);
   localStorage.setItem("pwd", (one+two+three+four+five+six));
